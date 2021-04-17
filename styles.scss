@@ -1,0 +1,362 @@
+
+
+body{
+    display: grid;
+    place-content: center;
+    background:#c3cfe2;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+h1{
+ color: lightslategray;
+ font-size: 40px;
+ text-align: center;
+ font-family: Arial, Helvetica, sans-serif;
+ margin-bottom: -1em;
+}
+
+//Testimonial//
+
+.testimonial{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+
+    &__header{
+        height: 350px;
+        width: 400px;
+        background-color: #fff;
+        border-radius: 25px 25px 0px 0px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+    &__text{
+        color: #71767e;
+        letter-spacing: 4px;
+        font-size: 18px;
+        margin: 20% 10% 10% 10%;
+        line-height: 1.5;
+        }
+
+    &__footer{
+        height: 200px;
+        width: 400px;
+        background-color:#686de0;
+        border-radius: 0px 0px 25px 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }  
+
+    &__photo img{
+        width: 140px;
+        border-radius: 50%;
+        border: 8px solid #fff;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -80px;
+        margin-bottom: 5%;
+    }    
+
+    &__name {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    &__website{
+        color: #a9acff;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+
+}
+
+
+//Portfolio Grid//
+
+
+.portfolio-grid{
+
+display: grid;
+grid-template-columns: auto auto auto;
+justify-content: center;
+gap: 70px;
+margin-top: 100px;
+margin-bottom: 100px;
+
+    
+
+    &__person{
+            height: 366px;
+            width: 266px;
+            border-radius: 10px;
+            background-color: #a9acff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            position: relative;
+            transition: all .5s ease-in;
+
+            
+        }
+
+    
+        &__header{
+            background-color: #fff;
+            height: 250px;
+            border-radius: 10px 10px 0px 0px;
+            
+        }
+    
+        &__text{
+            color:#71767e;
+            letter-spacing: 4px;
+            font-size: 14px;
+            line-height: 1.2;
+            text-align: center;
+            padding: 12% 10% 12% 10%;
+        }
+    
+        &__footer{
+            background-color: #686de0;
+            height: 116px;
+            width: 266px;
+            border-radius: 0px 0px 10px 10px;
+        }
+    
+        &__photo img{
+            width: 100px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            margin: -20% 25% 5% 25% ;
+    
+        }
+    
+        &__name{
+            color:#fff;
+            letter-spacing: 1px;
+            font-size: 15px;
+            line-height: 1.0;
+            text-align: center;
+        }
+    
+        &__website{
+            color:#a9acff;
+            letter-spacing: 1px;
+            font-size: 15px;
+            line-height: 1.0;
+            text-align: center;
+        }
+
+        &__overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            visibility: none;
+            transition: .5s ease;
+            background-color: #686de0;
+            border-radius: 10px;
+        }
+        
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 40px;
+            margin: 45% 25% 0% 25%;
+            border: 2px solid #fff; 
+            border-radius: 10px;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        &__overlay:hover {
+            opacity: 0.95;
+        }
+
+        @media (max-width: 780px){
+         gap: 50px;
+         grid-template-columns: auto auto;
+         justify-content: center;
+        }
+
+        @media (max-width: 420px){
+            grid-template-columns: auto;
+            gap: 50px;
+            justify-content: center;
+           }
+
+    }
+
+    //Social Media Buttons//
+
+    .smb{
+        position: fixed;
+        right: 0;
+        top: 50%;
+        color: #fff;
+    
+        
+        &__icons li{
+            list-style-type: none;
+            text-align: left;
+            justify-content: center;
+            font-size: 16px;
+            padding-top: 20px;
+            padding-left: 10px;
+        
+        }
+
+        &__icons--fa-laptop-code{
+            background-color: #e17b77;
+            height: 40px;
+            width: 200px;
+            position: relative;
+            right: -170px;
+            transition-duration: 500ms;
+        
+        }
+
+        &__icons--fa-laptop-code:hover{
+            right: 0px;
+            transition-timing-function: ease-in;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        &__icons--fa-laptop-code::before {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900;
+            content: "\f5fc";
+            font-size: 18px;
+            margin-right: 1em;
+            }
+
+        &__icons--fa-facebook-f{
+            background-color: #3b5998;
+            height: 40px;
+            width: 200px;
+            position: relative;
+            right: -170px;
+            transition-duration: 500ms;
+        }
+
+        &__icons--fa-facebook-f:hover{
+            right: 0px;
+            transition-timing-function: ease-in;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        &__icons--fa-facebook-f::before {
+            content: "\f39e";
+            font-family: "Font Awesome 5 Brands"; 
+            font-weight: 900;
+            font-size: 18px;
+            margin-right: 1em;
+            }
+        
+
+        &__icons--fa-twitter{
+            background-color: #00aced;
+            height: 40px;
+            width: 200px;
+            position: relative;
+            right: -170px;
+            transition-duration: 500ms;
+        }
+
+        &__icons--fa-twitter:hover{
+            right: 0px;
+            transition-timing-function: ease-in;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        &__icons--fa-twitter::before {
+            font-family: "Font Awesome 5 Brands"; 
+            font-weight: 900;
+            content: "\f099";
+            font-size: 18px;
+            margin-right: 1em;
+            }
+
+        
+
+        &__icons--fa-github{
+            background-color: #333;
+            height: 40px;
+            width: 200px;
+            position: relative;
+            right: -170px;
+            transition-duration: 500ms;
+        }
+
+        &__icons--fa-github:hover{
+            right: 0px;
+            transition-timing-function: ease-in;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        &__icons--fa-github::before {
+            font-family: "Font Awesome 5 Brands"; 
+            font-weight: 900;
+            content: "\f09b";
+            font-size: 18px;
+            margin-right: 1em;
+            }
+
+        &__icons--fa-linkedin-in{
+            background-color: #007bb6;
+            height: 40px;
+            width: 200px;
+            position: relative;
+            right: -170px;
+            transition-duration: 500ms;
+        }
+
+        &__icons--fa-linkedin-in:hover{
+            right: 0px;
+            transition-timing-function: ease-in;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        &__icons--fa-linkedin-in::before {
+            font-family: "Font Awesome 5 Brands"; 
+            font-weight: 900;
+            content: "\f0e1";
+            font-size: 18px;
+            margin-right: 1em;
+            }
+
+
+
+    a:link {
+        text-decoration: none;
+        }
+              
+    a:visited {
+        color: #fff;
+        text-decoration: none;
+        }
+              
+    }
+
+
+    
